@@ -1,0 +1,8 @@
+FROM python:3.9.11-alpine3.14
+RUN  apk add --no-cache \
+      gcc \
+    libc-dev \
+    libffi-dev
+RUN pip install jupyterlab
+WORKDIR /home/notebook
+CMD ["jupyter-lab", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
