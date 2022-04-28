@@ -11,5 +11,5 @@ WORKDIR notebook/
 RUN  virtualenv jupyterenv
 RUN pip3 install jupyter
 CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
-
+#sudo docker volume data
 #command: sudo docker run -p 8888:8888 -v data:/home/notebook  --rm -it
